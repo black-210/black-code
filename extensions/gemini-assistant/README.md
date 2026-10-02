@@ -1,83 +1,189 @@
 # Gemini Code Assistant
 
-**A free, independent, and powerful alternative to GitHub Copilot built for VS Code.**
+A free, independent, and powerful AI-inspired coding assistant for VS Code, built for developers who want a strong C/C++ workflow, clean UI, local code analysis, and no dependency on GitHub Copilot or cloud-based paid services.
 
-Gemini Code Assistant is a next-generation AI-inspired coding companion designed to be faster, smarter, and more independent than traditional inline suggestion boxes. Built with a focus on **C/C++ excellence**, beautiful UI, and true offline capability.
+This project is designed to be a practical local alternative to traditional code assistant experiences. It supports VS Code extension usage, command-line usage, shell-based helpers, and C-focused analysis features for memory safety, file I/O, pointers, structs, dynamic memory, and more.
 
-![Gemini Badge](https://img.shields.io/badge/Gemini-AI%20Assistant-blue?style=flat-square)
+![Gemini AI Assistant](https://img.shields.io/badge/Gemini-AI%20Assistant-blue?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 ![VS Code](https://img.shields.io/badge/VS%20Code-1.90%2B-007ACC?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen?style=flat-square)
+![C Focus](https://img.shields.io/badge/C%20Focus-Strong-orange?style=flat-square)
+
+Table of contents:
+- Overview
+- Why this project exists
+- Features list
+- Feature comparison
+- Supported platforms
+- Installation
+- Quick start
+- Usage examples
+- CLI usage
+- Shell usage
+- X11 and display support
+- Termux support
+- Architecture and project structure
+- Security and privacy
+- Configuration
+- Troubleshooting
+- Roadmap
+- Contributing
+- License
 
 ---
 
-## 🚀 Features Overview
+## Overview
 
-### Core Features
-- ✨ **Intelligent Code Generation** - Context-aware suggestions for C/C++, Python, JavaScript, TypeScript
-- 🎨 **Premium Dark Theme Panel** - Polished, distraction-free assistant interface
-- 📁 **Local File Upload** - Import your codebase for instant context analysis
-- 💾 **Offline-First** - No external API calls required, works completely locally
-- ⚡ **Lightning Fast** - Instant suggestions without latency
-- 🔒 **Privacy Focused** - All code stays on your machine
+Gemini Code Assistant is a multi-access coding toolkit with three major interfaces:
 
-### C/C++ Excellence
-- 🎯 **C-Centric Code Generation** - Optimized templates for malloc, structs, pointers, file I/O
-- 🛡️ **Memory Safety Analysis** - Detects unsafe functions (strcpy, gets, sprintf)
-- 🔍 **Memory Leak Detection** - Warns about malloc/free imbalances
-- 📊 **Code Analysis Dashboard** - Function extraction, struct detection, macro parsing
-- 📚 **30+ C Code Patterns** - Best practices for common C programming tasks
-- ⚠️ **Security Warnings** - Flags deprecated and dangerous functions
+1. VS Code extension panel
+2. Local CLI helper for code generation and analysis
+3. Bash shell helper for quick C-focused workflows
 
-### Development Tools
-- 🖥️ **CLI Tool** - Command-line interface for batch analysis and generation
-- 🐚 **Bash Shell Script** - Interactive shell for quick C code templates
-- 📖 **VS Code Panel** - Full-featured webview assistant with syntax highlighting
-- 🔗 **Inline Completions** - Real-time suggestions as you type
-- 📤 **One-Click Insert** - Generate and insert code directly into editor
+It is focused on providing a robust and stable AI-like coding experience without requiring paid subscriptions or external API lock-in. It is especially useful for C and system-programming tasks, but it also supports JavaScript, TypeScript, Python, Markdown, and general code generation workflows.
 
-### System Support
-- 🐧 **Linux/Unix** - Full X11 support with SSH forwarding
-- 🪟 **Windows** - Complete compatibility
-- 🍎 **macOS** - Native support
-- 📱 **Termux** - Experimental Android/mobile support
-- 🌐 **Remote SSH** - X11 forwarding for headless servers
+This project aims to deliver:
+- local-first design
+- free usage
+- clean UI
+- stronger C tooling
+- strong developer ergonomics
+- cross-platform support
+- practical analysis and code generation
 
 ---
 
-## 📊 Comparison: Gemini vs GitHub Copilot vs Inline Suggestions
+## Why this project exists
 
-| Feature | Gemini Assistant | GitHub Copilot | VS Code Native |
-|---------|-----------------|----------------|----------------|
-| **Cost** | FREE ✅ | $10-20/month ❌ | Free ✅ |
-| **Internet Required** | No ✅ | Yes ❌ | No ✅ |
-| **Privacy** | 100% Local ✅ | Cloud-based ❌ | Local ✅ |
-| **C/C++ Focus** | Yes ✅ | Generic ❌ | Basic ❌ |
-| **Memory Safety Checks** | Yes ✅ | No ❌ | No ❌ |
-| **Custom Code Analysis** | Yes ✅ | No ❌ | No ❌ |
-| **File Upload** | Yes ✅ | No ❌ | No ❌ |
-| **CLI Tool** | Yes ✅ | No ❌ | No ❌ |
-| **Beautiful Panel UI** | Yes ✅ | Dialog box ❌ | Basic ❌ |
-| **X11 Support** | Full ✅ | Limited ❌ | Limited ❌ |
-| **Termux Support** | Yes ✅ | No ❌ | No ❌ |
-| **Offline Code Gen** | Yes ✅ | No ❌ | No ❌ |
-| **30+ Code Patterns** | Yes ✅ | No ❌ | No ❌ |
-| **Shell Script Tool** | Yes ✅ | No ❌ | No ❌ |
+Many developers want a coding assistant that is:
+- free
+- independent
+- privacy-preserving
+- stable on C-focused projects
+- not tied to GitHub Copilot
+- usable even on Linux, SSH, and mobile environments
 
-**Bottom line**: Gemini is stronger, faster, and completely independent. No subscriptions, no internet, no corporate lock-in.
+This project fills that need by combining:
+- VS Code extension support
+- command-line generation
+- local file upload and inspection
+- static code analysis patterns
+- focused C best-practice generation
 
 ---
 
-## 🎯 Installation Methods
+## Features
 
-### Method 1: VS Code Extension Marketplace (Recommended)
-1. Open VS Code
-2. Go to Extensions (`Ctrl+Shift+X`)
-3. Search for `Gemini Code Assistant`
-4. Click Install
-5. Press `Ctrl+Alt+G` to open the panel
+### Core features
+- local and offline-first code generation
+- premium dark UI panel for VS Code
+- C/C++ code generation tuned for common patterns
+- file upload from your machine into the assistant context
+- direct insertion into the active editor
+- command palette support
+- CLI processing for quick generation and analysis
+- Bash helper for terminal-based generation
+- local memory and syntax-focused analysis
 
-### Method 2: From Source
+### C-focused features
+- safe malloc/free suggestions
+- warning detection for unsafe functions such as strcpy, gets, sprintf, scanf
+- analysis for potential memory leaks
+- struct and typedef generation
+- pointer and array examples
+- file I/O templates
+- dynamic memory patterns
+- common algorithm templates (linked list, queue, tree, hash table, sorting)
+- complexity analysis and issue detection
+
+### Developer productivity features
+- one-click insert into active file
+- quick prompt-based generation
+- project analysis for directory scanning
+- shell automation support
+- multi-platform compatibility
+- clean command usage with minimal dependencies
+- support for code generation in C, C++, JavaScript, TypeScript, Python
+
+### UI features
+- modern dark panel design
+- responsive layout
+- metrics panel for complexity and memory risk
+- generated code preview
+- insert code directly into editor
+- command-based access from VS Code
+
+---
+
+## Feature comparison
+
+| Feature | Gemini Code Assistant | GitHub Copilot | VS Code Native Suggestions |
+|--------|----------------------|----------------|---------------------------|
+| Cost | Free | Paid | Free |
+| Local-first | Yes | No | Yes |
+| C/C++ focus | Strong | Generic | Basic |
+| Memory safety analysis | Yes | No | No |
+| Project file upload | Yes | No | No |
+| CLI tool | Yes | No | No |
+| Shell automation | Yes | No | No |
+| X11/Linux support | Yes | Limited | Limited |
+| Termux support | Yes (CLI + experimental) | No | No |
+| Offline generation | Yes | No | Yes |
+| Fast local suggestions | Yes | Usually cloud-based | Yes |
+| Beautiful custom panel | Yes | Limited | Basic |
+| Privacy | High | Cloud | High |
+| Platform independence | High | Moderate | Moderate |
+
+This project aims to be a strong free and independent alternative for developers who want more control, cleaner local workflows, and better C-centric support.
+
+---
+
+## Supported platforms
+
+### Desktop operating systems
+- Linux
+- Ubuntu/Debian
+- Fedora/RHEL
+- Arch Linux
+- openSUSE
+- Alpine Linux
+- Windows 10/11
+- macOS
+
+### Remote and headless environments
+- SSH-based remote development
+- headless servers
+- X11 forwarding
+- WSL (Windows Subsystem for Linux) with caveats
+
+### Mobile and special environments
+- Termux on Android (CLI-focused, experimental GUI support)
+- minimal-resource environments
+
+### Display support
+- X11 display support for desktop Linux
+- remote X11 forwarding via SSH
+- headless mode for terminal-only workflows
+- GUI mode when display environment is available
+
+---
+
+## Installation
+
+### Method 1: VS Code extension (recommended)
+
+1. Open VS Code.
+2. Open Extensions (`Ctrl+Shift+X`).
+3. Search for `Gemini Code Assistant`.
+4. Install the extension if available in your local environment.
+5. Use the command palette and run:
+   - `Gemini: Open Assistant Panel`
+   - `Gemini: Upload Local Files`
+   - `Gemini: Generate Suggestion from Prompt`
+
+### Method 2: Install from source
+
 ```bash
 git clone https://github.com/black-210/black-code.git
 cd black-code
@@ -87,180 +193,353 @@ npm install
 npm run compile
 ```
 
-Then in VS Code: Press `F5` to debug and test the extension.
+Then launch the extension in VS Code with `F5` to run the extension host.
 
-### Method 3: Manual Installation (Package)
+### Method 3: Install via VSIX package
+
 ```bash
 cd extensions/gemini-assistant
-vsce package
-# This creates a .vsix file
+npm install
+npm run compile
+npx vsce package
+```
+
+Then install the generated `.vsix` file:
+
+```bash
 code --install-extension gemini-assistant-0.1.0.vsix
 ```
 
-### Method 4: CLI Only (No VS Code)
-```bash
-cd extensions/gemini-assistant
-npm install -g
-gemini-cli
-```
+### Method 4: CLI-only installation
 
----
-
-## 🐧 Linux Distribution Support
-
-### Ubuntu/Debian
-```bash
-sudo apt-get update
-sudo apt-get install -y nodejs npm git xauth libx11-6
-git clone https://github.com/black-210/black-code.git
-cd black-code && git checkout gemini-editor
-cd extensions/gemini-assistant && npm install
-```
-
-### Fedora/RHEL
-```bash
-sudo dnf install -y nodejs npm git xorg-x11-xauth libx11
-# Then follow the same steps as Ubuntu
-```
-
-### Arch Linux
-```bash
-sudo pacman -S nodejs npm git xorg-xauth libx11
-# Then follow the same steps as Ubuntu
-```
-
-### Alpine Linux
-```bash
-apk add --no-cache nodejs npm git xauth libx11 bash
-# Then follow the same steps as Ubuntu
-```
-
-### openSUSE
-```bash
-sudo zypper install -y nodejs npm git xauth libx11-6
-# Then follow the same steps as Ubuntu
-```
-
----
-
-## 📱 Termux Support (Android)
-
-### Installation on Termux
-
-1. **Install Termux** from F-Droid or APK Mirror
-
-2. **Update and install dependencies**:
-```bash
-pkg update && pkg upgrade
-pkg install -y nodejs git nodejs-lts
-```
-
-3. **Clone the repository**:
-```bash
-git clone https://github.com/black-210/black-code.git
-cd black-code
-git checkout gemini-editor
-```
-
-4. **Install Gemini CLI**:
 ```bash
 cd extensions/gemini-assistant
 npm install
 npm run compile
-ln -s $(pwd)/out/cli.js /data/data/com.termux/files/usr/bin/gemini-cli
+npm link
 ```
 
-5. **Run Gemini CLI**:
+Then run:
+
 ```bash
 gemini-cli
 ```
 
-### Termux X11 Display (Optional)
+### Method 5: Global install for Node-based environments
 
-To use Gemini with Termux X11 GUI:
-
-1. Install Termux X11 from F-Droid
-2. Set display variable:
 ```bash
-export DISPLAY=:0
+cd extensions/gemini-assistant
+npm install -g
 ```
 
-3. Launch code in Termux:
+---
+
+## Linux installation support
+
+### Ubuntu / Debian
+
+```bash
+sudo apt-get update
+sudo apt-get install -y nodejs npm git xauth libx11-6
+
+git clone https://github.com/black-210/black-code.git
+cd black-code
+git checkout gemini-editor
+cd extensions/gemini-assistant
+npm install
+npm run compile
+```
+
+### Fedora / RHEL
+
+```bash
+sudo dnf install -y nodejs npm git xorg-x11-xauth libx11
+```
+
+Then continue with the source install steps above.
+
+### Arch Linux
+
+```bash
+sudo pacman -S nodejs npm git xorg-xauth libx11
+```
+
+### Alpine Linux
+
+```bash
+apk add --no-cache nodejs npm git xauth libx11 bash
+```
+
+### openSUSE
+
+```bash
+sudo zypper install -y nodejs npm git xauth libx11-6
+```
+
+---
+
+## Windows installation
+
+### Requirements
+- Windows 10 or higher
+- VS Code 1.90+
+- Node.js 18+ recommended
+
+### Install from source
+
+```powershell
+git clone https://github.com/black-210/black-code.git
+cd black-code
+git checkout gemini-editor
+cd extensions/gemini-assistant
+npm install
+npm run compile
+```
+
+### Install `.vsix` file
+
+1. Build the package with `vsce`.
+2. Open VS Code.
+3. Use `Extensions: Install from VSIX`.
+4. Select the `.vsix` file.
+
+---
+
+## macOS installation
+
+### Requirements
+- VS Code 1.90+
+- Node.js 18+
+- Xcode Command Line Tools recommended
+
+### Install from source
+
+```bash
+git clone https://github.com/black-210/black-code.git
+cd black-code
+git checkout gemini-editor
+cd extensions/gemini-assistant
+npm install
+npm run compile
+```
+
+---
+
+## X11 requirements and support
+
+X11 support matters for GUI-based tooling on Linux and remote desktop environments.
+
+### Check if X11 is available
+
+```bash
+echo $DISPLAY
+xdpyinfo
+```
+
+If `DISPLAY` is empty, you may be running in headless mode.
+
+### Typical Linux usage
+
 ```bash
 export DISPLAY=:0
 code .
 ```
 
-**Note**: Full VS Code on Termux requires significant resources. CLI tool is recommended.
+### SSH with X11 forwarding
+
+```bash
+ssh -X user@host
+code .
+```
+
+### install X11 packages on Debian/Ubuntu
+
+```bash
+sudo apt-get install xauth x11-apps libx11-6
+```
+
+### install X11 packages on Fedora/RHEL
+
+```bash
+sudo dnf install xauth xdpyinfo libx11
+```
+
+### install X11 packages on Arch
+
+```bash
+sudo pacman -S xorg-xauth xorg-xdpyinfo libx11
+```
+
+### Notes
+- GUI features work best when `DISPLAY` is correctly set.
+- Headless terminals can still use the CLI and shell tools.
+- Remote servers can use SSH `-X` forwarding when supported.
 
 ---
 
-## 🪟 Windows Installation
+## Termux support
 
-### Prerequisites
-- Windows 10 or higher
-- VS Code 1.90+
-- Node.js 16+ (download from nodejs.org)
+Termux is supported mainly through the CLI and shell helper tools. Full VS Code GUI support is possible only with the right X11 environment and enough system resources.
 
-### Quick Start
-1. Download the `.vsix` file from releases
-2. Open VS Code
-3. Press `Ctrl+Shift+P` → type `Extensions: Install from VSIX`
-4. Select the `.vsix` file
-5. Reload VS Code
+### Install on Termux
 
-### CLI Tool on Windows
-```powershell
-cd extensions\gemini-assistant
-npm install -g
-gemini-cli
-```
-
----
-
-## 🍎 macOS Installation
-
-### Prerequisites
-- macOS 10.15+
-- Xcode Command Line Tools
-- VS Code 1.90+
-- Homebrew (optional)
-
-### Install via Homebrew
 ```bash
-brew tap black-210/gemini
-brew install gemini-assistant
-```
+pkg update && pkg upgrade
+pkg install -y nodejs git nodejs-lts
 
-### Install from Source
-```bash
 git clone https://github.com/black-210/black-code.git
-cd black-code && git checkout gemini-editor
+cd black-code
+git checkout gemini-editor
 cd extensions/gemini-assistant
 npm install
 npm run compile
 ```
 
----
-
-## 🔧 Advanced Configuration
-
-### Environment Variables
+### Run CLI in Termux
 
 ```bash
-# Set X11 display for remote connections
-export DISPLAY=:0
-
-# Set custom C compiler for analysis
-export GEMINI_CC=clang
-
-# Enable debug logging
-export GEMINI_DEBUG=1
+gemini-cli
 ```
 
-### VS Code Settings
+### Optional Termux X11 support
 
-Add to `.vscode/settings.json`:
+Install Termux X11 and then:
+
+```bash
+export DISPLAY=:0
+code .
+```
+
+### Termux notes
+- CLI is the recommended way for a stable mobile experience.
+- GUI support is experimental and depends on display availability and device resources.
+- For heavy editing and large codebases, a desktop Linux/macOS/Windows environment remains better.
+
+---
+
+## Quick start
+
+### VS Code Panel
+Open command palette and run:
+
+```text
+Gemini: Open Assistant Panel
+```
+
+Then:
+- type a prompt
+- upload local files
+- generate code
+- insert code into the editor
+
+### Inline generation
+Open a `.c`, `.cpp`, `.ts`, `.js`, or `.py` file and use the assistant features from the extension context.
+
+### CLI interactive mode
+
+```bash
+cd extensions/gemini-assistant
+npm install
+npm run compile
+node out/cli.js
+```
+
+or after linking:
+
+```bash
+gemini-cli
+```
+
+### Bash shell helper
+
+```bash
+cd extensions/gemini-assistant
+bash bin/gemini-shell.sh
+```
+
+---
+
+## CLI usage examples
+
+### Interactive mode
+
+```bash
+gemini-cli
+```
+
+### Analyze a directory
+
+```bash
+gemini-cli analyze ./src
+```
+
+### Generate C code from a prompt
+
+```bash
+gemini-cli generate "unsafe file handling in C"
+```
+
+### Generate a linked list implementation
+
+```bash
+gemini-cli generate "linked list implementation in C"
+```
+
+### Analyze a single file
+
+```bash
+gemini-cli analyze ./main.c
+```
+
+### Memory-check pattern
+
+```bash
+gemini-cli memory-check main.c
+```
+
+---
+
+## Shell helper usage
+
+### Main menu
+
+```bash
+bash bin/gemini-shell.sh
+```
+
+### Analyze a file
+
+```bash
+bash bin/gemini-shell.sh analyze myfile.c
+```
+
+### Generate a template
+
+```bash
+bash bin/gemini-shell.sh generate main
+bash bin/gemini-shell.sh generate struct
+bash bin/gemini-shell.sh generate malloc
+```
+
+### Unsafe function scan
+
+```bash
+bash bin/gemini-shell.sh unsafe myfile.c
+```
+
+---
+
+## Configuration
+
+The extension can be configured with the following kinds of behavior:
+- enable/disable inline completions
+- C-language-first mode
+- auto-analyze open files
+- memory-check behavior
+- theme selection
+
+Example settings:
+
 ```json
 {
   "geminiAssistant.enableInlineCompletions": true,
@@ -271,266 +550,222 @@ Add to `.vscode/settings.json`:
 }
 ```
 
-### Custom C Patterns
+Environment variables:
 
-Create `~/.gemini/patterns.json`:
-```json
-{
-  "myPattern": {
-    "name": "My Custom Pattern",
-    "description": "Custom C code pattern",
-    "code": "// Your template here"
-  }
-}
-```
-
----
-
-## 🎮 Quick Start Commands
-
-### VS Code Panel
-- **Open Panel**: `Ctrl+Alt+G` (Windows/Linux) or `Cmd+Alt+G` (macOS)
-- **Upload Files**: Click the "Upload Files" button in the panel
-- **Generate Code**: Type a prompt and click "Generate Suggestion"
-- **Insert Code**: Click "Insert into Editor" to apply the suggestion
-
-### CLI Tool
-```bash
-# Interactive mode
-gemini-cli
-
-# Analyze a directory
-gemini-cli analyze ./src
-
-# Generate code from prompt
-gemini-cli generate "C struct for user data"
-```
-
-### Shell Script
-```bash
-# Interactive shell
-bash bin/gemini-shell.sh
-
-# Analyze a C file
-bash bin/gemini-shell.sh analyze file.c
-
-# Generate a C template
-bash bin/gemini-shell.sh generate main
-
-# Check for unsafe functions
-bash bin/gemini-shell.sh unsafe file.c
-```
-
----
-
-## 💪 Key Strengths
-
-### 1. **Complete Independence**
-- No external API calls
-- No internet required
-- No corporate dependencies
-- Full control over your code
-
-### 2. **C/C++ Mastery**
-- 30+ battle-tested patterns
-- Memory safety analysis
-- Struct and pointer guides
-- File I/O examples
-- Best practices enforced
-
-### 3. **Beautiful & Intuitive**
-- Modern dark theme
-- Responsive webview panel
-- One-click code insertion
-- Clean command interface
-- Zero learning curve
-
-### 4. **Stable & Reliable**
-- Thoroughly tested
-- No version conflicts
-- Minimal dependencies
-- MIT licensed
-- Community-driven
-
-### 5. **Multiple Access Points**
-- VS Code extension
-- CLI tool for servers
-- Bash shell script
-- Programmatic API
-
----
-
-## 🔒 Privacy & Security
-
-- ✅ All code analysis happens **locally**
-- ✅ No telemetry or tracking
-- ✅ No login required
-- ✅ No account creation
-- ✅ Open source (MIT license)
-- ✅ Code never leaves your machine
-
----
-
-## 🐛 Troubleshooting
-
-### X11 Display Not Found
 ```bash
 export DISPLAY=:0
-# Or for SSH forwarding:
-ssh -X user@host
-```
-
-### Node.js Not Found
-```bash
-# Install Node.js
-curl https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-nvm install 18
-```
-
-### Extension Won't Load
-```bash
-cd extensions/gemini-assistant
-npm run compile
-# Then reload VS Code (Ctrl+Shift+P → Reload Window)
-```
-
-### Termux npm Issues
-```bash
-pkg install -y build-essential python3
-npm install --unsafe-perm
+export GEMINI_DEBUG=1
+export GEMINI_CC=clang
 ```
 
 ---
 
-## 📚 Documentation
+## Project structure
 
-- **[Installation Guide](./INSTALL.md)** - Detailed setup instructions
-- **[C Code Patterns](./docs/C_PATTERNS.md)** - 30+ C programming patterns
-- **[API Reference](./API.md)** - Programmatic API documentation
-- **[FAQ](./FAQ.md)** - Frequently asked questions
-- **[Contributing](./CONTRIBUTING.md)** - How to contribute
+```text
+extensions/
+  gemini-assistant/
+    README.md
+    INSTALL.md
+    API.md
+    package.json
+    tsconfig.json
+    src/
+      extension.ts
+      extension-pro.ts
+      cli.ts
+    bin/
+      gemini-cli.ts
+      gemini-shell.sh
+    docs/
+      C_PATTERNS.md
+    sample/
+      hello.c
+```
 
 ---
 
-## 🎓 Usage Examples
+## Example generated code for C
 
-### Example 1: Generate a Safe C Main Function
-```bash
-gemini-cli generate "main function with error handling"
-```
+### Safe main function
 
-**Output**:
 ```c
 #include <stdio.h>
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
     if (argc < 2) {
-        fprintf(stderr, "Usage: %s <arg>\n", argv[0]);
+        fprintf(stderr, "Usage: %s <argument>\n", argv[0]);
         return EXIT_FAILURE;
     }
+
     printf("Argument: %s\n", argv[1]);
     return EXIT_SUCCESS;
 }
 ```
 
-### Example 2: Analyze Your C Project
+### Safe memory allocation
+
+```c
+int *ptr = (int *)malloc(sizeof(int) * 10);
+if (ptr == NULL) {
+    fprintf(stderr, "Memory allocation failed\n");
+    return EXIT_FAILURE;
+}
+
+// use ptr
+free(ptr);
+ptr = NULL;
+```
+
+### Struct example
+
+```c
+typedef struct {
+    int id;
+    char name[64];
+    double score;
+} Student;
+```
+
+---
+
+## Security and privacy
+
+This project is designed to be privacy-respecting and local-first.
+
+- no mandatory cloud account required
+- no forced login
+- no cloud-only processing required
+- no external API dependency required
+- local file upload stays local in the workspace context
+- code analysis is local and deterministic
+
+This is especially valuable for developers working on private repositories, internal systems, or C codebases where confidentiality matters.
+
+---
+
+## Troubleshooting
+
+### 1. X11 display not found
+
 ```bash
-gemini-cli analyze ./src
+export DISPLAY=:0
 ```
 
-**Output**:
-```
-📄 main.c
-   Functions: int main(), int process_data()
-   Includes: stdio.h, stdlib.h
-   Structs: DataRecord
-   Issues: ⚠️ No NULL check after malloc()
+If you are on a remote server, use SSH with X11 forwarding:
 
-📄 utils.c
-   Functions: void print_error()
-   Includes: stdio.h
-   Issues: ⚠️ Unsafe function detected: strcpy
+```bash
+ssh -X user@host
 ```
 
-### Example 3: Upload Local Files
-1. Open VS Code
-2. Press `Ctrl+Alt+G`
-3. Click "Upload Files"
-4. Select your C files
-5. Type a prompt like "Create a function to read these files"
-6. Click "Generate Suggestion"
-7. Review and insert
+### 2. Node not found
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+source ~/.nvm/nvm.sh
+nvm install 18
+```
+
+### 3. Extension not loading
+
+```bash
+cd extensions/gemini-assistant
+npm install
+npm run compile
+```
+
+Then reload VS Code with:
+
+```text
+Developer: Reload Window
+```
+
+### 4. C compilation issues
+
+```bash
+gcc -Wall -Wextra -Werror yourfile.c -o yourfile
+```
+
+### 5. Termux issues
+
+```bash
+pkg install -y build-essential python3 nodejs-lts
+npm install --unsafe-perm
+```
 
 ---
 
-## 🤝 Contributing
+## Roadmap
 
-We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
-
-### Areas for Contribution
-- More C code patterns
-- Additional language support (Rust, Go, etc.)
-- Performance optimizations
-- Bug fixes and improvements
-- Documentation enhancements
-- Termux compatibility improvements
-
----
-
-## 📄 License
-
-MIT License - See [LICENSE](./LICENSE) for details.
-
-Free to use, modify, and distribute.
+Planned work includes:
+- richer multi-file project analysis
+- advanced C static analysis
+- better memory safety scoring
+- more algorithm templates
+- deeper pattern library
+- stable release packaging for Linux/macOS/Windows
+- better Termux compatibility
+- support for more languages and frameworks
+- codebase awareness and context accumulation
 
 ---
 
-## 🌟 Acknowledgments
+## Contributing
 
-- Built on VS Code Extension API
-- Inspired by AI-assisted coding
-- Community feedback and contributions
-- Open source philosophy
+Contributions are welcome.
 
----
+Ways to participate:
+- improve C checksum and memory safety checks
+- add more templates for algorithms and data structures
+- improve the CLI and shell helper behavior
+- fix cross-platform issues
+- improve documentation
+- add test coverage
 
-## 📞 Support
-
-- **GitHub Issues**: Report bugs and request features
-- **Discussions**: Ask questions and share ideas
-- **Email**: support@gemini-assistant.dev
-- **Discord**: Join our community server
+Please open a pull request and keep changes focused.
 
 ---
 
-## 🚀 Roadmap
+## License
 
-- [ ] GPU-accelerated code analysis
-- [ ] Multi-file context awareness
-- [ ] Custom training on your codebase
-- [ ] Language server protocol (LSP) support
-- [ ] IntelliJ/JetBrains support
-- [ ] Neovim plugin
-- [ ] Web IDE integration
-- [ ] Real-time collaborative coding
+MIT License.
+
+This project is open-source and can be used, modified, and redistributed under the terms of the MIT license.
 
 ---
 
-## 💡 Why Gemini?
+## Acknowledgments
 
-**Gemini Code Assistant** represents a new paradigm in AI-assisted coding:
-
-1. **Free Forever** - No subscriptions, no artificial limits
-2. **Independent** - No corporate dependency or cloud lock-in
-3. **Powerful** - Specialized for C/C++ with deep analysis
-4. **Beautiful** - Modern, intuitive user experience
-5. **Stable** - Thoroughly tested and production-ready
-
-Choose Gemini. Code smarter, faster, and free.
+This project is inspired by:
+- modern AI coding assistants
+- VS Code extension ecosystem
+- C memory-safety awareness
+- practical developer tooling
+- open-source contribution culture
 
 ---
 
-**Made with ❤️ by the black-210 community**
+## Summary
 
-[GitHub](https://github.com/black-210/black-code) • [Issues](https://github.com/black-210/black-code/issues) • [Discussions](https://github.com/black-210/black-code/discussions)
+Gemini Code Assistant is a practical, free, local-first AI-inspired tool built to help developers work faster with C and general coding tasks. It delivers:
+- premium UI
+- better C support
+- local file-based context
+- secure privacy model
+- CLI support
+- stable multi-platform installation
+- X11 and Termux flexibility
+
+If you want a strong, independent alternative to the common cloud-based assistant experience, this project is built for that purpose.
+
+---
+
+Project repo:
+- https://github.com/black-210/black-code
+
+Issues / discussions:
+- https://github.com/black-210/black-code/issues
+- https://github.com/black-210/black-code/discussions
+
+Made with care for developers who value speed, control, privacy, and strong C/C++ tooling.
