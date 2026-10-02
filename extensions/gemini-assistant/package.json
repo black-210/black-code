@@ -1,0 +1,88 @@
+{
+  "name": "gemini-code-assistant",
+  "displayName": "Gemini Code Assistant",
+  "description": "Free, independent, Gemini-inspired coding assistant with local file upload, smarter suggestions, and strong C/C++ support.",
+  "version": "0.1.0",
+  "publisher": "black-210",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other",
+    "Programming Languages",
+    "Machine Learning"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:geminiAssistant.openPanel",
+    "onCommand:geminiAssistant.uploadFiles",
+    "onCommand:geminiAssistant.generateFromPrompt",
+    "onLanguage:c",
+    "onLanguage:cpp",
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:python",
+    "onLanguage:markdown"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "geminiAssistant.openPanel",
+        "title": "Gemini: Open Assistant Panel"
+      },
+      {
+        "command": "geminiAssistant.uploadFiles",
+        "title": "Gemini: Upload Local Files"
+      },
+      {
+        "command": "geminiAssistant.generateFromPrompt",
+        "title": "Gemini: Generate Suggestion from Prompt"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "geminiAssistant.openPanel",
+        "key": "ctrl+alt+g",
+        "when": "editorTextFocus"
+      }
+    ],
+    "languages": [
+      {
+        "id": "c",
+        "extensions": [
+          ".c",
+          ".h"
+        ],
+        "aliases": [
+          "C",
+          "c"
+        ]
+      },
+      {
+        "id": "cpp",
+        "extensions": [
+          ".cpp",
+          ".cc",
+          ".cxx",
+          ".hpp",
+          ".hh"
+        ],
+        "aliases": [
+          "C++",
+          "cpp"
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "prepublishOnly": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.5.4"
+  }
+}
